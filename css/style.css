@@ -1,3 +1,4 @@
+/* ROOT CONFIGURATION */
 *{
     padding: 0;
     margin: 0;
@@ -5,13 +6,335 @@
 }
 
 :root{
-    --color-primary:black;
-    --color-primary-light: white;
+    --color-primary:rgb(2, 247, 186);
+    --color-primary-Dark: rgb(0, 194, 146);
 }
 
 body{
     font-weight: 200;
-    font-size: 1.05rem;
+    font-size: 16px;
     line-height: 1.6;
     font-family: 'Maven Pro', sans-serif;
+    background: whitesmoke;
+}
+
+/* Container */
+
+.container{
+    min-height: 100vh;
+}
+
+.wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px;
+    text-align: center;
+}
+/* ################### TITLE STYLE ####################### */
+
+.btn {
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 17px;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: -1px;
+
+    margin-bottom: 16px;
+}
+/* ################### SEARCH STYLE ####################### */
+.search{
+    margin:32px 0;
+}
+
+.searchBox{
+    margin: 19px 0;
+    display: flex;
+    align-items: stretch;
+}
+.searchControl,
+.searchButon{
+    width: 100%;
+}
+
+.searchControl{
+    padding: 0 16px;
+    font-size: 17px;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid var(--color-primary);
+    color:rgb(20, 112, 92);
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+}
+
+.searchControl::placeholder{
+    color: rgb(20, 112, 92)
+}
+
+.searchButton{
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    background: var(--color-primary);
+    color: whitesmoke;
+    border: none;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+
+.searchButton:hover{
+    background: var(--color-primary-Dark);
+}
+
+/* ################### RESULT STYLE ####################### */
+
+.result{
+    margin-top: 64px;
+}
+#meal{
+    margin: 38px 0;
+}
+/* CARDS */
+.mealObject{
+    border-radius: 16px;
+
+    -webkit-border-radius:16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px black;
+    margin: 32px 0;
+}
+
+.mealImg img{
+    width: 100%;
+    display: block;
+}
+
+.mealName{
+    padding: 24px 8px; 
+}
+
+.mealName h3{
+    font-size: 22px;
+}
+
+/* GET RECIPE */
+.recipe-btn{
+    text-decoration: none;
+    color: rgb(20, 112, 92);
+    background: var(--color-primary);
+    font-weight: 600;
+    font-size: 18px;
+    padding: 11px 0;
+    display: block;
+    width: 175px;
+    margin: 16px auto;
+    border-radius: 32px;
+
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+
+.recipe-btn:hover{
+    background: var(--color-primary-Dark);
+}
+
+/* ################### DETAILS STYLE ####################### */
+
+.details{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+    background: var(--color-primary);
+    border-radius: 16px;
+
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    display: none;
+    padding: 32px 0;
+}
+
+details::-webkit-scrollbar{
+    width: 10px;
+}
+
+details::-webkit-scrollbar-thumb{
+    background: whitesmoke;
+    border-radius: 32px;
+
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+}
+
+
+.mealDetails-Content{
+    margin: 32px;
+}   
+
+.mealDetails-Content p:not(.recipeCategory){
+    padding: 16px 0;
+}
+
+.closeButton{
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    font-size: 28px;
+    background: whitesmoke;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 10%;
+
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.recipeTittle{
+    letter-spacing: 1px;
+    padding-bottom: 16px;
+}
+
+.recipeCategory{
+    background: whitesmoke;
+    font-weight: 600;
+    color: rgb(20, 112, 92);
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.recipeInstruction{
+    padding: 16px 0;
+}
+
+.recipeMealImg img{
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    margin: 0 auto;
+    display: block;
+}
+
+.recipeLink{
+    margin: 22px 0;
+}
+
+.recipeLink a{
+    color: rgb(20, 112, 92);
+    font-size: 18px;
+    font-weight: 700;
+
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+
+    text-decoration: none;
+}
+
+.recipeLink a:hover{
+    opacity: 0.6;
+}
+
+/* JS */
+.notFound{
+    grid-template-columns: 1fr!important;
+    color: rgb(20, 112, 92);
+    font-size: 28px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.showRecipe{
+    display: block;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 600px){
+    .searchBox{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+    .mealObject{
+        margin: 0;
+    }
+    .details{
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #meal{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
