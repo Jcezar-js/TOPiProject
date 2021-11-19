@@ -312,6 +312,9 @@ details::-webkit-scrollbar-thumb{
 footer{
     text-align: center;
     margin-bottom: 15px;
+    padding: 2px;
+    font-size: 13px;
+    font-weight: 200;
 }
 
 /* RESPONSIVE */
