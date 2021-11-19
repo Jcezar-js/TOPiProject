@@ -22,6 +22,7 @@ body{
 
 .container{
     min-height: 100vh;
+
 }
 
 .wrapper{
@@ -29,6 +30,7 @@ body{
     margin: 0 auto;
     padding: 32px;
     text-align: center;
+
 }
 /* ################### TITLE STYLE ####################### */
 
@@ -307,7 +309,10 @@ details::-webkit-scrollbar-thumb{
 }
 
 
-
+footer{
+    text-align: center;
+    margin-bottom: 15px;
+}
 
 /* RESPONSIVE */
 
