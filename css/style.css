@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary:black;
+    --color-primary-light: white;
+}
+
+body{
+    font-weight: 200;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-family: 'Maven Pro', sans-serif;
+}
