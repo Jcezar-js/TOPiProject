@@ -2,9 +2,6 @@ const searchButton = document.getElementById('searchButton');
 const mealList = document.getElementById('meal');
 const mealDetailsContent = document.querySelector('.mealDetails-Content');
 const recipeCloseButton = document.getElementById('recipe-CloseButton');
-
-const ingredientsList =document.getElementById('ingredientsList');
-
 // listeners
 searchButton.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
@@ -36,7 +33,7 @@ function getMealList() {
                             <a href="#" class="recipe-btn">Get Recipe!</a>
                         </div>
                     </div> 
-                 `;
+                `;
             });
             mealList.classList.remove('notFound');
         }else{
@@ -68,6 +65,24 @@ function mealRecipeModal(meal) {
         <p class="recipeCategory">${meal.strCategory}</p>
 
         <div class="recipeInstruction">
+            <h3 class="recipeTittle">Ingredients: </h3>
+            <p>
+                ${meal.strIngredient1}  ${meal.strMeasure1}<br>
+                ${meal.strIngredient2}  ${meal.strMeasure2}<br>                                   
+                ${meal.strIngredient3}  ${meal.strMeasure3}<br>
+                ${meal.strIngredient4}  ${meal.strMeasure4}<br>
+                ${meal.strIngredient5}  ${meal.strMeasure5}<br>
+                ${meal.strIngredient6}  ${meal.strMeasure6}<br>
+                ${meal.strIngredient7}  ${meal.strMeasure7}<br>
+                ${meal.strIngredient8}  ${meal.strMeasure8}<br>
+                ${meal.strIngredient9}  ${meal.strMeasure9}<br>
+                ${meal.strIngredient10}  ${meal.strMeasure10}<br>
+                ${meal.strIngredient11}  ${meal.strMeasure11}<br>
+                ${meal.strIngredient12}  ${meal.strMeasure12}<br>
+                ${meal.strIngredient13}  ${meal.strMeasure13}<br>
+                ${meal.strIngredient14}  ${meal.strMeasure14}<br>
+                ${meal.strIngredient15}  ${meal.strMeasure15}<br>
+            </p>       
             <h3>Instructions: </h3>
             <p>${meal.strInstructions}</p>
         </div>
